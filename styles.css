@@ -26,10 +26,15 @@ header {
 }
 
 footer {
-    background-color: #A89C8D;
     text-align: center;
     padding: 5px;
     margin-top: 30px;
+}
+
+.fa-solid {
+    color: #7B6B5A;
+    font-weight: 900;
+    font-size: 30px;
 }
 
 
