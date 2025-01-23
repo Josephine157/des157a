@@ -1,0 +1,152 @@
+body{
+    background-image: url(images/brownplaid.jpg);
+    background-size: cover;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    }
+     
+#all{
+    width: 660px;
+    position: relative;
+    left: 10%;
+    }
+     
+#header{
+    background-color: #4E4B44;
+    color: #d9d3c5;
+    font-family: 'Alice';
+    border-radius: 0px 0px 8px 8px;
+    width: 700px;
+    height: 105px;
+    margin-left: 20px;
+    box-shadow: 5px 5px #302A27;
+    }
+     
+#header h1{
+    margin: 0px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 42px;
+    line-height: 105px;
+    text-shadow: 3px 3px #302A27;
+    }
+     
+
+#maincontainer{
+    width: 520px;
+    }
+     
+.postcontainer{
+    width: 700px;
+    position: relative;
+    top: 10px;
+    color: #302A27;
+    padding: 8px;
+    }
+     
+.icon{
+    width: 100px;
+    height: 100px;
+    box-shadow: 4px 4px #4E4B44;
+    position: absolute;
+    top: -45px;
+    z-index: 3;
+    }
+     
+.post{
+    background-color: #faf7f5;
+    width: 800px;
+    box-shadow: 5px 5px #302A27;
+    margin-top: 55px;
+    margin-left: 35px;
+    border-radius: 10px;
+    }
+     
+.subheaders{
+    text-align: right;
+    padding: 8px 8px 2px 2px;
+    margin: 3px;
+    font-weight: normal;
+    font-family: 'Alice';
+    font-size: 22px;
+    }
+     
+.date{
+    text-align: right;
+    padding: 0px 8px 0px 0px;
+    margin: 3px;
+    margin-bottom: 0%;
+    font-weight: normal;
+    font-family: 'Alice';
+    font-size: 14px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    }
+     
+.posttext{
+    padding: 20px;
+    text-align: justify;
+    letter-spacing: 1px;
+    }
+     
+     
+
+#nav{
+    position: fixed;
+    top: 0px;
+    right: 8%;
+    width: 170px;
+    background-color: #4E4B44;
+    border-radius: 0px 0px 8px 8px;
+    text-align: center;
+    font-family: 'Alice';
+    box-shadow: 2px 3px #302A27;
+    }
+     
+ul{
+    padding: 0px;
+    margin: 0px;
+    }
+     
+li{
+    list-style-type: none;
+    margin: 10px 0;
+    text-shadow: 2px 2px #302A27;
+    }
+
+.link {
+    color: #302A27;
+    text-decoration: none;    
+}
+
+.link:visited {
+    color: #302A27;
+}
+
+.link:hover{
+    color: #302A27;
+}
+
+.link:active {
+    color: #302A27;
+}
+    
+a{
+    color: #d9d3c5;
+    text-decoration: none;
+    }
+     
+a:visited{
+    color: #d9d3c5;
+    }
+     
+a:hover{
+    color: #d9d3c5;
+    font-style: italic;
+    }
+     
+a:active{
+    color: #d9d3c5;
+    font-style: italic;
+    font-weight: bold;
+    }
