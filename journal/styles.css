@@ -1,3 +1,12 @@
+.alice-regular {
+    font-family: "Alice", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/food/foo-1/foo84.cur), auto !important;} /* End https://www.cursors-4u.com */
+
+
 body{
     background-image: url(images/brownplaid.jpg);
     background-size: cover;
