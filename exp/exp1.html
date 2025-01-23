@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Open console to see functional code!</h2>
+
+    
+
+    <script>
+        // A program that uses console.log to print all the numbers from 1 to 100. For numbers divisible by 2, print "Wow" instead of the number, and for numbers divisible by 6 (and not 2), print "Wee" instead
+        for (i = 0; i<101; i++) {
+             if ((i % 2 === 0) && (i % 4 === 0)) {
+                console.log ("WowWee");
+            }
+              else if (i % 2 === 0) {
+                console.log("Wow");
+            } else if (i % 6 === 0) {
+                console.log("Wee");
+            } else {
+                console.log(i);
+            }
+
+        }
+    </script>
+    
+</body>
+
+</html>
