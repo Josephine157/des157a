@@ -1,48 +1,48 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript Experiment Two</title>
 
 </head>
 
 <body>
-    <h1 id="h1"></h1>
-    <h2 id="h2"></h2>
+
+    <h1>Number Generator!</h1>
+
+    <div id="output">
+        <p>Your Random Number(s):</p>
+    </div>
 
     <script>
-
-        var yourName = prompt('provide your name','');
-        var food = ['cheese', 'fruit', 'candy', 'chips', 'pasta', 'ramen']
-
-        function hello(name){
-            if(name == null || name == ``){
-                console.log("You didn't give a name!");
-            }
-            else{
-                console.log(`Hello ${name}, and welcome!`);
-            }
-            return greeting;
-        }
-        console.log(hello(yourName));
-
-        function randomInt(min, max){
-            return Math.floor((max - min + 1) * Math.random()) + min;
-        }
-
-        function hospitality(name, gift){
-            console.log(hello(name));
-            var randomGift = gift[randomInt(0, gift.length-1)];
-                console.log(`${name}, would you like some ${randomGift}?`);
-        }
-        hospitality(h1, h2);  
+        // this program prompts the user to enter a number and then generates the number of random numbers.
+        var quantity = Number(prompt("How many random numbers would you like to generate from 1-100?",""));
         
+
+        function randomInt() {
+            return Math.floor(Math.random() * 90);
+        }
+
+        if (isNaN(quantity) || quantity <= 0 ) {
+            alert("ERROR: Please enter a positive integer.")
+        }
+        else {
+            const output = document.querySelector('#output');
+            var numList = [];
+
+            for (var i = 0; i < quantity; i++) {
+                var num = randomInt();
+                numList.push(num);
+
+                output.innerHTML += `<p>${num}</p>`;
+            }
+        }
+        
+
     </script>
     
 </body>
-
 </html>
