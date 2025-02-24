@@ -1,0 +1,175 @@
+body{
+    background-color: #d9d3c5;
+    background-image: url(images/brownplaid.jpg);
+    background-size: cover;
+    color: #4E4B44;   
+    justify-content: center;
+    max-height: 920px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+
+img{
+    display: block;
+    height: auto;
+    width: 20vw;
+    object-fit: contain;
+    margin: auto;
+}
+
+header{
+    background-color: #4E4B44;
+    color: #d9d3c5;
+    font-family: 'Alice';
+    
+
+    box-shadow: 5px 5px #302A27;
+    }
+     
+h1{
+    margin: 0px;
+    font-weight: normal;
+    text-align: center;
+    font-size: 42px;
+    line-height: 105px;
+    text-shadow: 3px 3px #302A27;
+    }
+
+button{
+    background-color: #302A27;
+    padding: 8px 20px;
+    border-radius: 100px;
+    color: white;
+    font-size: 1.2em;
+    transition: 0.5s;
+    border: none;
+}
+
+button:hover{
+    background-color: #4E4B44;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    gap: 42px;
+}
+
+input{
+    background-color: #FFFBFB;
+    height: 32px;
+    border-radius: 10px;
+    border: solid 2px #302A27;
+    padding: 0 8px;
+    width: 160px;
+    color: #302A27;
+}
+   
+
+input[type=text]:focus {
+    border: #302A27 2px;
+}
+
+#questions{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 8px;
+}
+
+.submit-button{
+    margin: auto;
+    
+}
+
+#again{
+    width: fit-content;
+    margin-left: auto;
+}
+
+#message{
+    display: none;
+    padding: 20px 40px;
+    width: fit-content;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+#madlibs-questions{
+    display: flex;
+    justify-content: center;
+    background-color: #faf7f5;
+    box-shadow: 5px 5px #302A27;
+    border-radius: 10px;
+    padding: 20px;
+    display: block;
+    margin: auto;
+}
+
+
+#madlibs-output{
+    max-width: 700px;
+    background-color: #faf7f5;
+    box-shadow: 5px 5px #302A27;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: none;
+}
+
+#madlibs-output p{
+    line-height: 2em;
+    font-size: 1.3em;
+}
+
+@media only screen and (min-width: 1000px){
+    h1{
+        font-size: 5em;
+    }
+
+    input{
+        width: 180px;
+    }
+
+    #container{
+        flex-direction: row;
+        padding: 2vw 4vw 0;
+        align-items: center;
+    }
+
+    #questions{
+        gap: 48px;
+    }
+
+    img{
+        width: 25vw;
+    }
+
+    #madlibs-questions{
+        margin: 0;
+    }
+
+    #madlibs-output p{
+        line-height: 2em;
+        font-size: 1.6em;
+    }
+}
