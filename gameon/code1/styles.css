@@ -1,25 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 body {
-    font-family: Arial;
-    color: #333;
-    padding: 50px;
-    line-height: 1.5em;
+    font-family: 'Orbitron', sans-serif;
+    color: #00eaff;
+    background: radial-gradient(circle at top, #060c21 10%, #010409 90%);
+    text-shadow: 0 0 5px rgba(0, 234, 255, 0.7);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
-button { 
+h1 {
+    text-align: center;
+    font-size: 2.2em; /* Adjusted for better scaling */
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
     padding: 10px;
 }
 
-div {
-    padding: 20px;
+h2 {
+    font-size: 1.2em;
+    color: #89f5ff;
+    text-align: center;
 }
 
-#gamecontrol, #score {
-    background-color: aliceblue;
-}
-
+/* Responsive Container */
 #game {
-    background-color:#eaeaea;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+    max-width: 90%; 
+    margin: 0 auto 30px auto;
+    background: rgba(15, 15, 40, 0.85);
+    border: 3px solid #00eaff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
 }
-#actions {
-    background-color: silver;
+
+/* Image Responsiveness */
+img {
+    display: block;
+    max-width: 80%; 
+    height: auto;
+    margin: 10px auto;
+    border-radius: 10px;
 }
+
+/* Health bar adjustments */
+.health {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+#healthbar0, #healthbar1 {
+    width: 120px; 
+    height: 20px;
+    border: 3px solid #00eaff;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+    background: linear-gradient(90deg, #ff00ff 0%, #00eaff 50%, #ff00ff 100%);
+}
+
+#action {
+    max-width: 90%;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    border: 3px solid #00eaff;
+    border-radius: 10px;
+    background: rgba(15, 15, 40, 0.9);
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.3);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Buttons Responsive */
+button {
+    background: transparent;
+    border: 3px solid #00eaff;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    font-family: 'Orbitron', sans-serif;
+    color: #00eaff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.5);
+    width: 90%; 
+    max-width: 250px;
+    margin: 5px;
+}
+
+button:hover {
+    background: rgba(0, 234, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 234, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    #game {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    img {
+        max-width: 90%;
+    }
+
+    .health {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #healthbar0, #healthbar1 {
+        width: 100px; /* Adjust size */
+        height: 18px;
+    }
+
+    #action {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    #game {
+        gap: 10px;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 7px 12px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: block;
+}
+
+
+/* battle animations */
+
+/* Note the use of names for these classes. They all have the same names 
+with a number at the end, so that if the user rolls a 0, 1, 2, etc, that
+number can just be tacked on to the class name in JS. */
+
+@keyframes neon-glow {
+    0% { text-shadow: 0 0 5px #00eaff; }
+    50% { text-shadow: 0 0 15px #00eaff; }
+    100% { text-shadow: 0 0 5px #00eaff; }
+}
+
+h1 {
+    animation: neon-glow 2s infinite alternate;
+}
+
+.attack0 {
+    animation: veryweak 1s ease-in-out 2;
+}
+
+.attack1 {
+    animation: weak 1s ease-in-out 2;
+}
+
+.attack2 {
+    animation: medium 1s ease-in-out 2;
+}
+
+.attack3 {
+    animation: strong 1s ease-in-out 2;
+}
+
+.attack4 {
+    animation: massive 1s ease-in-out 2;
+}
+
+.defend2 {
+    animation: gobackward 2s ease-in-out 1;
+}
+
+.defend0 {
+    animation: shake 1s ease-in-out 2;
+}
+
+.defend1{
+    animation: spin 1s ease-in-out 1;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    50% { transform: translateX(8px); }
+    75% { transform: translateX(-4px); }
+}
+
+@keyframes veryweak {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.15) rotate(2deg);} 
+    100% {transform: scale(1);}
+}
+
+@keyframes weak {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.3) rotate(-3deg);} 
+    100% {transform: scale(1);}
+}
+
+@keyframes medium {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.5) rotate(5deg);} 
+    100% {transform: scale(1);}
+}
+
+@keyframes strong {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.75) rotate(-5deg);} 
+    100% {transform: scale(1);}
+}
+
+@keyframes massive {
+    0% {transform: scale(1);}
+    50% {transform: scale(2.1) rotate(7deg);} 
+    100% {transform: scale(1);}
+}
+
+@keyframes gobackward {
+    0% {transform: scale(1);}
+    20% {transform: scale(0.65) rotate(-20deg);}
+    40% {transform: scale(0.65) rotate(20deg);}
+    60% {transform: scale(0.65) rotate(0deg);}
+    80% {transform: scale(0.65);}
+    100% {transform: scale(1);}
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);} 
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px #00eaff; }
+    50% { box-shadow: 0 0 20px #00eaff; }
+    100% { box-shadow: 0 0 5px #00eaff; }
+}
+
