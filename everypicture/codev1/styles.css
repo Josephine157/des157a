@@ -1,117 +1,118 @@
-* {
-	box-sizing: border-box;
-}
-
-.the-girl-next-door-regular {
-    font-family: "The Girl Next Door", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.mali-regular {
-    font-family: "Mali", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-h1 {
-    font-family: 'The Girl Next Door', serif;
-    font-size: 3em;
-}
-
-p {
-    font-family: 'Mali', serif;
-    font-size: 1.1em;
-    line-height: 30px;;
-}
-
-main {
-	width: 30vw;
-	padding: 30px;
-}
-
-section {
-    display: flex;
-	flex-direction: column;
-	justify-content: center;
-    height: 100vh;
-}
-
-figure {
-    display: block;
-    position: fixed;
-    width: 70vw;
-    height: 100vh;
-	top:0;
-	right:0;
-	overflow: hidden;
+body {
+    background: #fef6e4; /* Soft cream background */
+    font-family: 'Georgia', serif;
+    color: #5c4033; /* Warm brown text */
+    text-align: center;
     margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling */
+    animation: backgroundFade 8s infinite alternate;
 }
 
-figure img {
-	position: absolute;
-	transition: all 2s ease;
+@keyframes backgroundFade {
+    0% { background-color: #fef6e4; }
+    50% { background-color: #edd3b7; }
+    100% { background-color: #fef6e4; }
 }
 
-.sect1 {
-	width: 115vh;
-	top:0;
-	left: 50%;
-	transform:translateX(-50%);
+h1, h2 {
+    color: #d17b49; /* Muted orange */
 }
 
-.sect2, .sect3, .sect4, .sect5 {
-    width: 2100px;
+.side {
+    background: #fffaf0; /* Light beige */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-bottom: 30px; /* Space between the side and the images */
+    min-height: 300px; /* Ensure uniform height */
+    width: 100%; /* Make it responsive */
+    max-width: 4000px; /* Limit the width */
+    overflow: auto; /* Scroll only if content overflows */
 }
 
-.sect2 {
-	top: calc(-2984px + 370vh);
-	left: calc(-3377px + 200vw);
+.interests {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #b48e7d;
 }
 
-.sect3 {
-    top: calc(-2984px + 310vh);
-	left: calc(-3377px + 230vw);
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 400px; /* Adjusted height for the image section */
+    width: 100%;
 }
 
-.sect4 {
-	top: calc(-2984px + 265vh);
-	left: calc(-3377px + 200vw);
+.goods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
-.sect5 {
-    top: calc(-2984px + 310vh);
-	left: calc(-3377px + 160vw);
+picture {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000;
 }
 
-.sect6 {
-    width: 115vh;
-	top:0;
-	left: 50%;
-	transform:translateX(-50%);
+picture img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.6s ease-in;
 }
 
-.color1 { 
-    background-color: #f7f7f5; 
-    transition: all 1s;
+figcaption {
+    font-family: Roboto;
+    font-size: 20px;
+    margin-top: 5px;
 }
-.color2 { 
-    background-color: #98c7f1; 
-    transition: all 1s;
+
+.unselected {
+    border: 3.5px solid #5c4033;
 }
-.color3 { 
-    background-color: #a4d13a; 
-    transition: all 1s;
+
+.selected {
+    border: 3.5px solid #a68272;
 }
-.color4 { 
-    background-color: #eee296; 
-    transition: all 1s;
+
+.bubble:hover img,
+.chair:hover img,
+.shelf:hover img,
+.sofa:hover img {
+    transform: scale(1.2);
 }
-.color5 { 
-    background-color: #fe8b4c; 
-    transition: all 1s;
+
+
+
+#puppy img {
+    margin: 40px;
+    min-width: 340px;
+    min-height: 340px;
 }
-.color6 { 
-    background-color: #f7f7f5; 
-    transition: all 1s;
+
+#puppy {
+    padding: 0;
+    min-height: 380px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#puppy figcaption {
+    width: 60%;
+    margin-bottom: 20px;
 }
