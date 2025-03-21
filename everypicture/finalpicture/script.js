@@ -28,7 +28,7 @@
         hat.className = 'unselected';
         sweater.className = 'unselected'; 
         interest.innerHTML = 'Bunny plush!';
-        puppyfig.innerHTML = 'This is my first ever toy! I have had it for years, every since I was a puppy, and I like to snuggle up with it on the couch while my humans watch that strange box with pictures.';
+        puppyfig.innerHTML = 'This is my first ever toy! I have had it for years, ever since I was a puppy, and I like to snuggle up with it on the couch while my humans watch that strange box with pictures.';
         puppyimage.src = 'images/sleepyy.jpg'; // Ensure this path is correct
     });
 
